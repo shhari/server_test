@@ -2,7 +2,6 @@
 - name: install patches
   hosts: workstation.lab.example.com
   become: true
-  remote_user: root
   tasks:
   - name: install packages
     yum:
