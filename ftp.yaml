@@ -1,0 +1,14 @@
+---
+- name: install patches
+  hosts: workstation.lab.example.com
+  become: true
+  tasks:
+  - name: install packages
+    yum:
+      name: vsftpd
+      state: latest
+
+  - name:  install dovecot
+    yum:
+      name: dovecot
+      state: latest
